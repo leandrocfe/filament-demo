@@ -2,7 +2,7 @@
 
 A demo application to illustrate how Filament Admin works.
 
-![Filament Demo](https://user-images.githubusercontent.com/21066418/180368112-cfccda8d-a442-43e3-8cf3-3ba04f42247d.png)
+![Filament Demo](https://raw.githubusercontent.com/leandrocfe/filament-demo/apex-charts-plugin/screenshot.png)
 
 ## Installation
 
@@ -10,6 +10,7 @@ Clone the repo locally:
 
 ```sh
 git clone https://github.com/laravel-filament/demo.git filament-demo && cd filament-demo
+git checkout apex-charts-plugin
 ```
 
 Install PHP dependencies:
@@ -52,7 +53,6 @@ php artisan db:seed
 > If you get an "Invalid datetime format (1292)" error, this is probably related to the timezone setting of your database.  
 > Please see https://dba.stackexchange.com/questions/234270/incorrect-datetime-value-mysql
 
-
 Create a symlink to the storage:
 
 ```sh
@@ -75,26 +75,33 @@ You're ready to go! Visit the url in your browser, and login with:
 ### Relations
 
 #### BelongsTo
-- ProductResource
-- OrderResource
-- PostResource
+
+-   ProductResource
+-   OrderResource
+-   PostResource
 
 #### BelongsToMany
-- CategoryResource\RelationManagers\ProductsRelationManager
+
+-   CategoryResource\RelationManagers\ProductsRelationManager
 
 #### HasMany
-- OrderResource\RelationManagers\PaymentsRelationManager
+
+-   OrderResource\RelationManagers\PaymentsRelationManager
 
 #### HasManyThrough
-- CustomerResource\RelationManagers\PaymentsRelationManager
+
+-   CustomerResource\RelationManagers\PaymentsRelationManager
 
 #### MorphOne
-- OrderResource -> Address
+
+-   OrderResource -> Address
 
 #### MorphMany
-- ProductResource\RelationManagers\CommentsRelationManager
-- PostResource\RelationManagers\CommentsRelationManager
+
+-   ProductResource\RelationManagers\CommentsRelationManager
+-   PostResource\RelationManagers\CommentsRelationManager
 
 #### MorphToMany
-- BrandResource\RelationManagers\AddressRelationManager
-- CustomerResource\RelationManagers\AddressRelationManager
+
+-   BrandResource\RelationManagers\AddressRelationManager
+-   CustomerResource\RelationManagers\AddressRelationManager

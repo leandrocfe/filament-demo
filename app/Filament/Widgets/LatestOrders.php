@@ -13,7 +13,7 @@ class LatestOrders extends BaseWidget
 {
     protected int | string | array $columnSpan = 'full';
 
-    protected static ?int $sort = 2;
+    protected static ?int $sort = 5;
 
     public function getDefaultTableRecordsPerPageSelectOption(): int
     {
