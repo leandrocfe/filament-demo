@@ -21,7 +21,8 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "squirephp/countries-en": "^3.3",
-        "squirephp/currencies-en": "^3.3"
+        "squirephp/currencies-en": "^3.3",
+        "leandrocfe/filament-apex-charts": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
