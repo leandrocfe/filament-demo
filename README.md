@@ -2,7 +2,7 @@
 
 A demo application to illustrate how Filament Admin works.
 
-![Filament Demo](https://raw.githubusercontent.com/leandrocfe/filament-demo/apex-charts-plugin-v3/screenshot.png)
+![Filament Demo](https://raw.githubusercontent.com/leandrocfe/filament-demo/apex-charts-plugin-v3/screenshot.jpg)
 
 ## Installation
 
