@@ -8,37 +8,27 @@ class CustomersChart extends ApexChartWidget
 {
     /**
      * Chart Id
-     *
-     * @var string
      */
-    protected static string $chartId = 'customersChart';
+    protected static ?string $chartId = 'customersChart';
 
     /**
      * Widget Title
-     *
-     * @var string|null
      */
     protected static ?string $heading = 'Total customers';
 
     /**
      * Sort
-     *
-     * @var integer|null
      */
     protected static ?int $sort = 4;
 
     /**
      * Widget content height
-     *
-     * @var integer|null
      */
     protected static ?int $contentHeight = 270;
 
     /**
      * Chart options (series, labels, types, size, animations...)
      * https://apexcharts.com/docs/options
-     *
-     * @return array
      */
     protected function getOptions(): array
     {
@@ -47,8 +37,8 @@ class CustomersChart extends ApexChartWidget
                 'type' => 'line',
                 'height' => 250,
                 'toolbar' => [
-                    'show' => false
-                ]
+                    'show' => false,
+                ],
             ],
             'series' => [
                 [
@@ -61,7 +51,7 @@ class CustomersChart extends ApexChartWidget
                 'labels' => [
                     'style' => [
                         'fontWeight' => 400,
-                        'fontFamily' => 'inherit'
+                        'fontFamily' => 'inherit',
                     ],
                 ],
             ],
@@ -69,7 +59,7 @@ class CustomersChart extends ApexChartWidget
                 'labels' => [
                     'style' => [
                         'fontWeight' => 400,
-                        'fontFamily' => 'inherit'
+                        'fontFamily' => 'inherit',
                     ],
                 ],
             ],
@@ -94,13 +84,13 @@ class CustomersChart extends ApexChartWidget
                 'show' => false,
             ],
             'markers' => [
-                'size' => 2
+                'size' => 2,
             ],
             'tooltip' => [
-                'enabled' => true
+                'enabled' => true,
             ],
             'stroke' => [
-                'width' => 4
+                'width' => 4,
             ],
             'colors' => ['#f59e0b'],
         ];

@@ -12,36 +12,26 @@ class OrdersChart extends ApexChartWidget
 {
     /**
      * Chart Id
-     *
-     * @var string
      */
-    protected static string $chartId = 'ordersChart';
+    protected static ?string $chartId = 'ordersChart';
 
     /**
      * Widget Title
-     *
-     * @var string|null
      */
     protected static ?string $heading = 'Orders per month';
 
     /**
      * Sort
-     *
-     * @var integer|null
      */
     protected static ?int $sort = 3;
 
     /**
      * Widget content height
-     *
-     * @var integer|null
      */
     protected static ?int $contentHeight = 260;
 
     /**
      * Filter Form
-     *
-     * @return array
      */
     protected function getFormSchema(): array
     {
@@ -52,7 +42,7 @@ class OrdersChart extends ApexChartWidget
                 ->options([
                     'line' => 'Line',
                     'bar' => 'Col',
-                    'area' => 'Area'
+                    'area' => 'Area',
                 ])
                 ->inline(true)
                 ->label('Type'),
@@ -79,8 +69,6 @@ class OrdersChart extends ApexChartWidget
     /**
      * Chart options (series, labels, types, size, animations...)
      * https://apexcharts.com/docs/options
-     *
-     * @return array
      */
     protected function getOptions(): array
     {
@@ -91,8 +79,8 @@ class OrdersChart extends ApexChartWidget
                 'type' => $filters['ordersChartType'],
                 'height' => 250,
                 'toolbar' => [
-                    'show' => false
-                ]
+                    'show' => false,
+                ],
             ],
             'series' => [
                 [
@@ -110,7 +98,7 @@ class OrdersChart extends ApexChartWidget
                 'labels' => [
                     'style' => [
                         'fontWeight' => 400,
-                        'fontFamily' => 'inherit'
+                        'fontFamily' => 'inherit',
                     ],
                 ],
             ],
@@ -118,7 +106,7 @@ class OrdersChart extends ApexChartWidget
                 'labels' => [
                     'style' => [
                         'fontWeight' => 400,
-                        'fontFamily' => 'inherit'
+                        'fontFamily' => 'inherit',
                     ],
                 ],
             ],
@@ -140,16 +128,16 @@ class OrdersChart extends ApexChartWidget
                 'enabled' => false,
             ],
             'grid' => [
-                'show' => $filters['ordersChartGrid']
+                'show' => $filters['ordersChartGrid'],
             ],
             'markers' => [
-                'size' => $filters['ordersChartMarkers'] ? 3 : 0
+                'size' => $filters['ordersChartMarkers'] ? 3 : 0,
             ],
             'tooltip' => [
-                'enabled' => true
+                'enabled' => true,
             ],
             'stroke' => [
-                'width' => $filters['ordersChartType'] === 'line' ? 4 : 0
+                'width' => $filters['ordersChartType'] === 'line' ? 4 : 0,
             ],
             'colors' => ['#f59e0b'],
             'annotations' => [

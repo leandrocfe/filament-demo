@@ -8,37 +8,27 @@ class RevenueChart extends ApexChartWidget
 {
     /**
      * Chart Id
-     *
-     * @var string
      */
-    protected static string $chartId = 'revenueChart';
+    protected static ?string $chartId = 'revenueChart';
 
     /**
      * Widget Title
-     *
-     * @var string|null
      */
     protected static ?string $heading = 'Revenue per month';
 
     /**
      * Sort
-     *
-     * @var integer|null
      */
     protected static ?int $sort = 2;
 
     /**
      * Widget content height
-     *
-     * @var integer|null
      */
     protected static ?int $contentHeight = 275;
 
     /**
      * Chart options (series, labels, types, size, animations...)
      * https://apexcharts.com/docs/options
-     *
-     * @return array
      */
     protected function getOptions(): array
     {
@@ -55,11 +45,11 @@ class RevenueChart extends ApexChartWidget
             'series' => [
                 [
                     'name' => 'Earning',
-                    'data' => [270, 210, 180, 200, 250, 280, 250, 270, 150, 210, 180, 200]
+                    'data' => [270, 210, 180, 200, 250, 280, 250, 270, 150, 210, 180, 200],
                 ],
                 [
                     'name' => 'Expense',
-                    'data' => [-140, -160, -180, -150, -100, -60, -80, -100, -180, -160, -180, -150]
+                    'data' => [-140, -160, -180, -150, -100, -60, -80, -100, -180, -160, -180, -150],
                 ],
             ],
             'plotOptions' => [
@@ -69,7 +59,7 @@ class RevenueChart extends ApexChartWidget
                 ],
             ],
             'dataLabels' => [
-                'enabled' => false
+                'enabled' => false,
             ],
             'legend' => [
                 'show' => true,
@@ -81,11 +71,11 @@ class RevenueChart extends ApexChartWidget
                     'width' => 12,
                     'radius' => 12,
                     'offsetX' => -3,
-                    'offsetY' => 2
+                    'offsetY' => 2,
                 ],
                 'itemMargin' => [
-                    'horizontal' => 5
-                ]
+                    'horizontal' => 5,
+                ],
             ],
             'grid' => [
                 'show' => false,
@@ -93,26 +83,26 @@ class RevenueChart extends ApexChartWidget
             ],
             'xaxis' => [
                 'categories' => [
-                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
                 ],
                 'labels' => [
                     'style' => [
-                        'fontFamily' => 'inherit'
-                    ]
+                        'fontFamily' => 'inherit',
+                    ],
                 ],
                 'axisTicks' => [
-                    'show' => false
+                    'show' => false,
                 ],
                 'axisBorder' => [
-                    'show' => false
-                ]
+                    'show' => false,
+                ],
             ],
             'yaxis' => [
                 'offsetX' => -16,
                 'labels' => [
                     'style' => [
-                        'fontFamily' => 'inherit'
-                    ]
+                        'fontFamily' => 'inherit',
+                    ],
                 ],
                 'min' => -200,
                 'max' => 300,
@@ -133,7 +123,7 @@ class RevenueChart extends ApexChartWidget
             'stroke' => [
                 'curve' => 'smooth',
                 'width' => 1,
-                'lineCap' => 'round'
+                'lineCap' => 'round',
             ],
             'colors' => ['#f59e0b', '#ea580c'],
         ];

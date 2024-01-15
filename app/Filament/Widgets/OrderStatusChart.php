@@ -9,43 +9,33 @@ class OrderStatusChart extends ApexChartWidget
 {
     /**
      * Chart Id
-     *
-     * @var string
      */
-    protected static string $chartId = 'orderStatusChart';
+    protected static ?string $chartId = 'orderStatusChart';
 
     /**
      * Widget Title
-     *
-     * @var string|null
      */
     protected static ?string $heading = 'Order Status - last week';
 
     /**
      * Sort
-     *
-     * @var integer|null
      */
     protected static ?int $sort = 1;
 
     /**
      * Widget content height
-     *
-     * @var integer|null
      */
     protected static ?int $contentHeight = 215;
 
     /**
      * Widget Footer
-     *
-     * @return string|View
      */
-    protected function getFooter(): string|View
+    protected function getFooter(): string | View
     {
         $data = [
             'new' => 230,
             'delivered' => 890,
-            'cancelled' => 54
+            'cancelled' => 54,
         ];
 
         return view('charts.order-status.footer', ['data' => $data]);
@@ -54,8 +44,6 @@ class OrderStatusChart extends ApexChartWidget
     /**
      * Chart options (series, labels, types, size, animations...)
      * https://apexcharts.com/docs/options
-     *
-     * @return array
      */
     protected function getOptions(): array
     {
@@ -86,13 +74,13 @@ class OrderStatusChart extends ApexChartWidget
                             'show' => true,
                             'offsetY' => -10,
                             'fontWeight' => 600,
-                            'fontFamily' => 'inherit'
+                            'fontFamily' => 'inherit',
                         ],
                         'value' => [
                             'show' => true,
                             'fontWeight' => 600,
                             'fontSize' => '24px',
-                            'fontFamily' => 'inherit'
+                            'fontFamily' => 'inherit',
                         ],
                     ],
 
