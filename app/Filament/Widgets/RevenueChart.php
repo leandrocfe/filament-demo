@@ -2,6 +2,7 @@
 
 namespace App\Filament\Widgets;
 
+use Filament\Support\RawJs;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
 class RevenueChart extends ApexChartWidget
@@ -127,5 +128,34 @@ class RevenueChart extends ApexChartWidget
             ],
             'colors' => ['#f59e0b', '#ea580c'],
         ];
+    }
+
+    protected function extraJsOptions(): ?RawJs
+    {
+        return RawJs::make(<<<'JS'
+        {
+            xaxis: {
+                labels: {
+                    formatter: function (val, timestamp, opts) {
+                        return val
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    formatter: function (val, index) {
+                        return '$' + val
+                    }
+                }
+            },
+            tooltip: {
+                x: {
+                    formatter: function (val) {
+                        return val + ' /23'
+                    }
+                }
+            }
+        }
+    JS);
     }
 }
